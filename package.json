@@ -2,12 +2,12 @@
   "name": "",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack",
+    "build": "npm run rimraf && cross-env NODE_ENV=production webpack",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "rimraf": "rimraf dist/*"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
   }
 }

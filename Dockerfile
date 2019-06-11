@@ -12,6 +12,8 @@ RUN chown -R node:node /home/node/app
 
 ENV PATH=$PATH:/home/node/app/node_modules
 USER node
+# use this after export package.json
+RUN npm install
 RUN npm install --save-dev webpack webpack-cli webpack-dev-server
 
 ENTRYPOINT ["/bin/sh"]

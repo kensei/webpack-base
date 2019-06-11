@@ -10,8 +10,12 @@ services:
     volumes:
       - ./src:/home/node/app/src
       - ./dist:/home/node/app/dist
+      - ./.eslintrc:/home/node/app/.eslintrc
       - ./webpack.config.js:/home/node/app/webpack.config.js
+      - ./webpack.common.js:/home/node/app/webpack.common.js
       - ./postcss.config.js:/home/node/app/postcss.config.js
+      - ./stylelint.config.js:/home/node/app/stylelint.config.js
+      - ./tsconfig.json:/home/node/app/tsconfig.json
     tty: true
     ports:
       - 8979:8979
