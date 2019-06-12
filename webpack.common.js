@@ -2,6 +2,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -43,7 +44,11 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
-    new StyleLintPlugin('./stylelint.config.js')
+    new StyleLintPlugin('./stylelint.config.js'),
+    new HtmlWebpackPlugin({
+      filename: path.resolve('dist', 'index.html'),
+      template: path.resolve('src', 'index.html')
+    })
   ],
   devServer: {
     host: "0.0.0.0",

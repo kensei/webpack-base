@@ -12,7 +12,7 @@
 
 ```
 # common
-docker-compose exec nodejs npm install -D copy-webpack-plugin autoprefixer cross-env rimraf webpack-merge stylelint stylelint-webpack-plugin
+docker-compose exec nodejs npm install -D copy-webpack-plugin autoprefixer cross-env rimraf webpack-merge stylelint stylelint-webpack-plugin html-webpack-plugin
 # ES6
 docker-compose exec nodejs npm install -D babel-loader @babel/core @babel/preset-env eslint eslint-loader
 # loader
